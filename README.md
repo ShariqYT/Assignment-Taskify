@@ -61,3 +61,28 @@ npm run dev
   <li>Delete a Task: Click the "Delete" button next to the task you want to remove.</li>
   <li>Toggle Completion: Use the checkbox to mark a task as completed.</li>
 </ul>
+
+<h2>Code Structure</h2>
+
+<h3>Todo_App (client)</h3>
+
+• ```src/components/AddTask.js: Component for adding and updating tasks.```
+
+• ```src/components/TaskLists.js: Component for displaying and managing the list of tasks.```
+
+• ```src/pages/Home.js: Main page that integrates AddTask and TaskLists components.```
+
+• ```src/pages/Navbar.js: Header for the navigation.```
+
+<h3>Server (server)</h3>
+
+• ```index.js: Entry point for the Express server. Sets up routes (update, add, edit, delete and get all tasks) and connects to MongoDB.```
+
+• ```models/Task.js: Mongoose schema and model for tasks.```
+
+<h2>Key Decisions</h2>
+
+<li>Component-Based Architecture: The client is built using React components for better reusability.</li>
+<li>State Management: React's useState and useEffect hooks are used for managing and fetching state.</li>
+<li>RESTful API: The server uses Express to handle CRUD operations and communicates with MongoDB using Mongoose.</li>
+<li>Error Handling: Basic error handling is implemented both on the client and server sides to provide better feedback during failures.</li>
